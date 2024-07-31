@@ -1,4 +1,11 @@
 :root {
+  --theme: orange;
+  
   --red: red;
   --black: black;
+  --white: white;
+
+  --header-height: 30px;
+  --header-position: fixed;
+
 }

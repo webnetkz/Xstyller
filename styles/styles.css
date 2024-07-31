@@ -3,9 +3,24 @@
 * {
   margin: 0;
   padding: 0;
+  transition-duration: 0.3s;
 }
 
 body {
-  background: var(--red);
-  color: var(--balck);
+  color: var(--black);
+  background: var(--white);
+}
+
+header#header {
+  position: var(--header-position);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--header-height);
+  background: var(--theme);
+}
+
+section#content {
+  padding: 10px 20px;
+  padding-top: calc(var(--header-height) + 10px);
 }
