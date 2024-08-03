@@ -1,0 +1,32 @@
+::-webkit-scrollbar {
+  width: var(--scroll-bar-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-color);
+  border-radius: var(--scroll-bar-radius);
+  border: 1px solid rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-theme);
+  cursor: pointer;
+  filter: invert(100%);
+  border: 1px solid var(--gray);
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  opacity: 0;
+}

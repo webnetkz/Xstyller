@@ -11,9 +11,295 @@
 
   </header>
   <section id="content">
-    <button>Button</button>
-    <input type="text">
+
+    <h2>Other styles</h2>
+    <div class="other-settings-container">
+      <div class="card">
+
+      
+        <div>
+          <label for="fontFamily">
+            Font
+            <select name="font-family" id="fontFamily" val=" " listener="change">
+              <option value="ubuntu">ubuntu</option>
+              <option value="sans-serif">sans-serif</option>
+              <option value="serif">serif</option>
+              <option value="monospace">monospace</option>
+              <option value="roboto">roboto</option>
+              <option value="Open+Sans">open sans</option>
+              <option value="lato">lato</option>
+              <option value="montserrat">montserrat</option>
+              <option value="oswald">oswald</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label for="bodyBackground">
+            Background body
+            <input type="color" name="bg-theme" onload="this.value = rootStyles.getPropertyValue('--bg-theme')" id="bodyBackground" val=" " listener="change">
+          </label>
+        </div>
+        <div>
+          <label for="transitionDuration">
+            Transition duration
+            <input type="range" name="transition-duration" id="transitionDuration" val="s" listener="input">
+          </label>
+        </div>
+      </div>
+      
+      <h2>ScrollBar styles</h2>
+      <div class="card">
+        <div>
+          <label for="scrollBarWidth">
+            ScrollBar width
+            <input type="range" name="scroll-bar-width" value="3" id="scrollBarWidth" val="px" listener="input">
+          </label>
+        </div>
+        <div>
+          <label for="scrollBarColor">
+            ScrollBar color
+            <input type="color" name="scroll-bar-color" id="scrollBarColor" val=" " listener="change">
+          </label>
+        </div>
+        <div>
+          <label for="scrollBarBackgroundColor">
+            ScrollBar background color
+            <input type="color" name="scroll-bar-background-color" id="scrollBarBackgroundColor" val=" " listener="change">
+          </label>
+        </div>
+        <div>
+          <label for="scrollBarRadius">
+            ScrollBar radius
+            <input type="range" name="scroll-bar-radius" value="30" id="scrollBarRadius" val="px" listener="input">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <h2>Button styles</h2>
+    <div class="button-container card">
+      <div>
+        <label for="buttonRadiusRange">
+          Button border radius
+          <input type="range" name="button-radius" value="0" id="buttonRadiusRange" max="50" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonFontSizeRange">
+          Button font size
+          <input type="range" name="button-font-size" value="14" id="buttonFontSizeRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonMarginRange">
+          Button margin
+          <input type="range" name="button-margin" id="buttonMarginRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonPaddingRange">
+          Button padding
+          <input type="range" name="button-padding" id="buttonPaddingRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonBorderWidthRange">
+          Button border width
+          <input type="range" name="button-border-width" id="buttonBorderWidthRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonBorderStyleRange">
+          Button border style
+          <select name="button-border-style" id="buttonBorderStyleRange" val=" " listener="change">
+            <option value="solid">solid</option>
+            <option value="dashed">dashed</option>
+            <option value="double">double</option>
+            <option value="groove">groove</option>
+            <option value="inset">inset</option>
+            <option value="outset">outset</option>
+            <option value="ridge">ridge</option>
+            <option value="hidden">hidden</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label for="buttonBorderColorRange">
+          Button border color
+          <input type="color" name="button-border-color" id="buttonBorderColorRange" val=" " listener="change">
+        </label>
+      </div>
+      <div>
+        <label for="buttonBackgroundColorRange">
+          Button background color
+          <input type="color" name="button-background-color" id="buttonBackgroundColorRange" val=" " listener="change">
+        </label>
+      </div>
+      <div>
+        <label for="buttonFontColorRange">
+          Button font color
+          <input type="color" name="button-font-color" id="buttonFontColorRange" val=" " listener="change">
+        </label>
+      </div>
+      <hr>
+      <div>
+        <label for="buttonCursor">
+          Hover button cursor
+          <select name="button-cursor" id="buttonCursor" val=" " listener="change">
+            <option value="pointer">pointer</option>
+            <option value="alias">alias</option>
+            <option value="all-scroll">all-scroll</option>
+            <option value="auto">auto</option>
+            <option value="cell">cell</option>
+            <option value="col-resize">col-resize</option>
+            <option value="context-menu">context-menu</option>
+            <option value="copy">copy</option>
+            <option value="e-resize">e-resize</option>
+            <option value="ew-resize">ew-resize</option>
+            <option value="crosshair">crosshair</option>
+            <option value="grab">grab</option>
+            <option value="grabbing">grabbing</option>
+            <option value="help">help</option>
+            <option value="move">move</option>
+            <option value="n-resize">n-resize</option>
+            <option value="ne-resize">ne-resize</option>
+            <option value="nesw-resize">nesw-resize</option>
+            <option value="no-drop">no-drop</option>
+            <option value="ns-resize">ns-resize</option>
+            <option value="nw-resize">nw-resize</option>
+            <option value="progress">progress</option>
+            <option value="s-resize">s-resize</option>
+            <option value="se-resize">se-resize</option>
+            <option value="sw-resize">sw-resize</option>
+            <option value="text">text</option>
+            <option value="row-resize">row-resize</option>
+            <option value="vertical-text">vertical-text</option>
+            <option value="zoom-in">zoom-in</option>
+            <option value="zoom-out">zoom-out</option>
+            <option value="wait">wait</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label for="hoverButtonFontColorRange">
+          Hover button font color
+          <input type="color" name="button-hover-font-color" id="hoverButtonFontColorRange" val=" " listener="change">
+        </label>
+      </div>
+
+      <div class="template-block">
+        <button>Button</button>
+      </div>
+    </div>
+
+    <h2>Input styles</h2>
+    <div class="input-contaner card">
+      <div>
+        <label for="inputRadiusRange">
+          Input radius
+          <input type="range" name="input-radius" id="inputRadiusRange" max="50" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="inputFontSizeRange">
+          Input font size
+          <input type="range" name="input-font-size" id="inputFontSizeRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="inputMarginRange">
+          Input margin
+          <input type="range" name="input-margin" id="inputMarginRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="inputPaddingRange">
+          Input padding
+          <input type="range" name="input-padding" id="inputPaddingRange" val="px" listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="inputBorderWidthRange">
+          Input border width
+          <input type="range" name="input-border-width" id="inputBorderWidthRange" val="px" listener="input">
+        </label>
+      </div>
+
+      <div class="template-block">
+        <input type="text" value="input">
+      </div>
+    </div>
   </section>
 
+  <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </pre>
+
+  <script>
+
+    function setCSSVariables(name, value)
+    {
+      document.documentElement.style.setProperty(name, value);
+    }
+
+    function setVariables (element, options = {})
+    {
+      
+      let defaults = {
+        "name": "",
+        "listener": "input",
+        "val": "px"
+      }
+
+      const settings = { ...defaults, ...options };
+
+      // console.log(settings);
+      element.addEventListener(settings.listener, function()
+      {
+        setCSSVariables(settings.name, String(this.value + settings.val).trim());
+      });
+    }
+
+    const getSettings = document.querySelectorAll('.button-container input, .button-container select, .input-contaner input, .other-settings-container select,  .other-settings-container input');
+
+    getSettings.forEach(function(elem)
+    {
+      setVariables(elem,
+      {
+        "name": "--"+elem.name,
+        "val": elem.getAttribute('val'),
+        "listener": elem.getAttribute('listener')
+      });
+    });
+
+  </script>
 </body>
 </html>

@@ -1,11 +1,52 @@
 :root {
   --theme: orange;
+  --bg-theme: rgb(43, 43, 43);
   
   --red: red;
   --black: black;
   --white: white;
+  --gray: gray;
 
+  --font-family: "ubuntu";
+  --transition-duration: 300ms;
+
+
+  --scroll-bar-width: 3px;
+  --scroll-bar-color: var(--theme);
+  --scroll-bar-background-color: var(--bg-theme);
+  --scroll-bar-radius: 30px;
+  
   --header-height: 30px;
   --header-position: fixed;
+  --header-z: 9;
 
+
+  --button-radius: 0px;
+  --button-font-size: 1rem;
+  --button-margin: 5px;
+  --button-padding: 3px 9px;
+  --button-border-width: 1px;
+  --button-border-style: solid;
+  --button-border-color: black;
+  --button-background-color: black;
+  --button-font-color: white;
+  --button-cursor: pointer;
+  
+  --button-hover-radius: 0px;
+  --button-hover-font-size: 1rem;
+  --button-hover-margin: 5px;
+  --button-hover-padding: 3px 9px;
+  --button-hover-border-width: 1px;
+  --button-hover-border-style: solid;
+  --button-hover-border-color: black;
+  --button-hover-background-color: black;
+  --button-hover-font-color: black;
+
+  --input-radius: 0px;
+  --input-font-size: 1rem;
+  --input-margin: 5px;
+  --input-padding: 3px 9px;
+  --input-border-width: 1px;
+  --input-border-style: solid;
+  --input-border-color: black;
 }

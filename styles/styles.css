@@ -1,14 +1,66 @@
 @import url(variables.css);
+@import url(scroll-bar.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
-  transition-duration: 0.3s;
+  transition-duration: var(--transition-duration);
+  font-family: var(--font-family);
 }
 
 body {
+  font-family: monospace;
   color: var(--black);
-  background: var(--white);
+  background: var(--bg-theme);
+}
+
+button {
+  border-radius: var(--button-radius);
+  font-size: var(--button-font-size);
+  margin: var(--button-margin);
+  padding: var(--button-padding);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
+  background-color: var(--button-background-color);
+  color: var(--button-font-color);
+  cursor: var(--button-cursor);
+}
+
+button:hover {
+  border-radius: var(--button-hover-radius);
+  font-size: var(--button-hover-font-size);
+  margin: var(--button-hover-margin);
+  padding: var(--button-hover-padding);
+  border-width: var(--button-hover-border-width);
+  border-style: var(--button-hover-border-style);
+  border-color: var(--button-hover-border-color);
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-font-color);
+}
+
+input {
+  border-radius: var(--input-radius);
+  font-size: var(--input-font-size);
+  margin: var(--input-margin);
+  padding: var(--input-padding);
+  border-width: var(--input-border-width);
+  border-style: var(--input-border-style);
+  border-color: var(--input-border-color);
+}
+
+.card {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid var(--theme);
 }
 
 header#header {
@@ -18,9 +70,27 @@ header#header {
   width: 100vw;
   height: var(--header-height);
   background: var(--theme);
+  z-index: var(--header-z);
 }
 
 section#content {
   padding: 10px 20px;
   padding-top: calc(var(--header-height) + 10px);
+}
+
+.template-block {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0px;
+  width: 50vw;
+  height: 100%;
+  background: gray;
+}
+
+h2 {
+  color: var(--white);
+  margin: 2rem;
 }
