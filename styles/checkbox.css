@@ -1,0 +1,85 @@
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"], input[type="checkbox"]:after, input[type="checkbox"]:before, input[type="checkbox"] *, input[type="checkbox"] *:after, input[type="checkbox"] *:before, input[type="checkbox"] + label.checkbox {
+  box-sizing: border-box;
+}
+input[type="checkbox"]::-moz-selection, input[type="checkbox"]:after::-moz-selection, input[type="checkbox"]:before::-moz-selection, input[type="checkbox"] *::-moz-selection, input[type="checkbox"] *:after::-moz-selection, input[type="checkbox"] *:before::-moz-selection, input[type="checkbox"] + label.checkbox::-moz-selection {
+  background: none;
+}
+input[type="checkbox"]::selection, input[type="checkbox"]:after::selection, input[type="checkbox"]:before::selection, input[type="checkbox"] *::selection, input[type="checkbox"] *:after::selection, input[type="checkbox"] *:before::selection, input[type="checkbox"] + label.checkbox::selection {
+  background: none;
+}
+input[type="checkbox"] + label.checkbox {
+  outline: none;
+  display: block;
+  width: 3em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+input[type="checkbox"] + label.checkbox:after, input[type="checkbox"] + label.checkbox:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+input[type="checkbox"] + label.checkbox:after {
+  left: 0;
+}
+input[type="checkbox"] + label.checkbox:before {
+  display: none;
+}
+input[type="checkbox"]:checked + label.checkbox:after {
+  left: 50%;
+}
+
+
+
+input[type="checkbox"] + label.checkbox {
+  background: var(--theme);
+  border-radius: var(--checkbox-radius);
+  padding: 2px;
+  transition: all 0.4s ease;
+  border: 1px solid #e8eae9;
+}
+input[type="checkbox"] + label.checkbox:after {
+  border-radius: var(--checkbox-radius);
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.change-theme-x input[type="checkbox"] + label.checkbox:after {
+  content: "\1F4A1";
+  text-align: center;
+}
+
+input[type="checkbox"] + label.checkbox:hover:after {
+  will-change: padding;
+}
+input[type="checkbox"] + label.checkbox:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+input[type="checkbox"] + label.checkbox:active:after {
+  padding-right: 0.8em;
+}
+input[type="checkbox"]:checked + label.checkbox {
+  background: var(--bg-theme);
+  outline: none;
+}
+input[type="checkbox"]:checked + label.checkbox:active {
+  box-shadow: none;
+}
+input[type="checkbox"]:checked + label.checkbox:active:after {
+  margin-left: -0.8em;
+}
+
+
+@media (max-width: 1200px) {
+
+}

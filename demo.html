@@ -12,11 +12,10 @@
   </header>
   <section id="content">
 
+    
     <h2>Other styles</h2>
     <div class="other-settings-container">
       <div class="card">
-
-      
         <div>
           <label for="fontFamily">
             Font
@@ -36,13 +35,13 @@
         <div>
           <label for="bodyBackground">
             Background body
-            <input type="color" name="bg-theme" onload="this.value = rootStyles.getPropertyValue('--bg-theme')" id="bodyBackground" val=" " listener="change">
+            <input type="color" name="bg-theme" onload="initializeColorInput(this)" id="bodyBackground" val=" " listener="change">
           </label>
         </div>
         <div>
           <label for="transitionDuration">
             Transition duration
-            <input type="range" name="transition-duration" id="transitionDuration" val="s" listener="input">
+            <input type="range" name="transition-duration" id="transitionDuration" val="s" listener="input" step="0.1" min="0" max="10">
           </label>
         </div>
       </div>
@@ -73,6 +72,38 @@
             <input type="range" name="scroll-bar-radius" value="30" id="scrollBarRadius" val="px" listener="input">
           </label>
         </div>
+      </div>
+    </div>
+
+    <h2>Checkbox</h2>
+    <div class="card">
+      
+      <div>
+        <label for="checkboxRadius">
+          Checkbox radius
+          <input type="range" name="checkbox-radius" value="30" id="checkboxRadius" val="px" listener="input">
+        </label>
+      </div>
+
+      <div class="template-block">
+        <input type="checkbox" name="123" id="xx">
+        <label for="xx" class="checkbox"></label>
+      </div>
+    </div>
+
+    <h2>Range</h2>
+    <div class="card">
+      
+      <div>
+        <label for="rangeRadius">
+          Range radius
+          <input type="range" name="range-radius" value="30" id="rangeRadius" val="px" listener="input">
+        </label>
+      </div>
+
+      <div class="template-block">
+        <input type="range" name="range" id="rangeTemplate">
+        <label for="rangeTemplate"></label>
       </div>
     </div>
 
@@ -139,6 +170,18 @@
         <label for="buttonFontColorRange">
           Button font color
           <input type="color" name="button-font-color" id="buttonFontColorRange" val=" " listener="change">
+        </label>
+      </div>
+      <div>
+        <label for="buttonOpacity">
+          Button opacity
+          <input type="range" name="button-opacity" min="0" max="1" step="0.1" id="buttonOpacity" val=" " listener="input">
+        </label>
+      </div>
+      <div>
+        <label for="buttonShadowColor">
+          Button shadow color
+          <input type="color" name="button-shadow-color" id="buttonShadowColor" val=" " listener="change">
         </label>
       </div>
       <hr>
@@ -263,43 +306,6 @@
 
   </pre>
 
-  <script>
-
-    function setCSSVariables(name, value)
-    {
-      document.documentElement.style.setProperty(name, value);
-    }
-
-    function setVariables (element, options = {})
-    {
-      
-      let defaults = {
-        "name": "",
-        "listener": "input",
-        "val": "px"
-      }
-
-      const settings = { ...defaults, ...options };
-
-      // console.log(settings);
-      element.addEventListener(settings.listener, function()
-      {
-        setCSSVariables(settings.name, String(this.value + settings.val).trim());
-      });
-    }
-
-    const getSettings = document.querySelectorAll('.button-container input, .button-container select, .input-contaner input, .other-settings-container select,  .other-settings-container input');
-
-    getSettings.forEach(function(elem)
-    {
-      setVariables(elem,
-      {
-        "name": "--"+elem.name,
-        "val": elem.getAttribute('val'),
-        "listener": elem.getAttribute('listener')
-      });
-    });
-
-  </script>
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

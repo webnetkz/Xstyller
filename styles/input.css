@@ -1,0 +1,10 @@
+input[type="text"],
+input[type="number"] {
+  border-radius: var(--input-radius);
+  font-size: var(--input-font-size);
+  margin: var(--input-margin);
+  padding: var(--input-padding);
+  border-width: var(--input-border-width);
+  border-style: var(--input-border-style);
+  border-color: var(--input-border-color);
+}

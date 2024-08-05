@@ -1,5 +1,9 @@
 @import url(variables.css);
+@import url(input.css);
+@import url(button.css);
 @import url(scroll-bar.css);
+@import url(checkbox.css);
+@import url(range.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
@@ -22,40 +26,17 @@ body {
   background: var(--bg-theme);
 }
 
-button {
-  border-radius: var(--button-radius);
-  font-size: var(--button-font-size);
-  margin: var(--button-margin);
-  padding: var(--button-padding);
-  border-width: var(--button-border-width);
-  border-style: var(--button-border-style);
-  border-color: var(--button-border-color);
-  background-color: var(--button-background-color);
-  color: var(--button-font-color);
-  cursor: var(--button-cursor);
+#content > div > div  {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-button:hover {
-  border-radius: var(--button-hover-radius);
-  font-size: var(--button-hover-font-size);
-  margin: var(--button-hover-margin);
-  padding: var(--button-hover-padding);
-  border-width: var(--button-hover-border-width);
-  border-style: var(--button-hover-border-style);
-  border-color: var(--button-hover-border-color);
-  background-color: var(--button-hover-background-color);
-  color: var(--button-hover-font-color);
+label {
+  padding: 10px;
 }
 
-input {
-  border-radius: var(--input-radius);
-  font-size: var(--input-font-size);
-  margin: var(--input-margin);
-  padding: var(--input-padding);
-  border-width: var(--input-border-width);
-  border-style: var(--input-border-style);
-  border-color: var(--input-border-color);
-}
 
 .card {
   position: relative;
